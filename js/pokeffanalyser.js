@@ -65,11 +65,11 @@ function loadTypesFromFile() {
 document.addEventListener("DOMContentLoaded", function(event) {
     var typedelems = document.getElementsByClassName("types")
     for (var i = 0; i < typedelems.length; i++) {
-        for (var j = 0; j < typenames.length; j++) {
+        typenames.forEach(function(typn) {
             var option = document.createElement("option");
-            option.text = typenames[j];
+            option.text = typn;
             typedelems[i].add(option);
-        }
+        })
     }
 });
 
